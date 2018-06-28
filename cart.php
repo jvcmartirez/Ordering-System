@@ -39,154 +39,269 @@
 
 <head>
 	<title>Order Pizza</title>
-	<link rel = "stylesheet" type = "text/css" href = "style.css">
 </head>
 
 <body>
 	<div class = "header">
 		<h2>Order Pizza</h2>
+		<link rel = "stylesheet" type = "text/css" href = "style.css">
 	</div>
 	
 	<form method = "post" action = "cart.php">
 		
 		<?php include('errors.php'); ?>
 		
-		
 		<form>
 			<div>
-			<h5>Classic Pizza</h5>
+			<h4>Classic Pizza</h4>
 				<label>Cheese</label>
+					<div>
+					<label>10"</label>
 					<input type="radio" name="radio" value= 175.0>
+					<label>14"</label>
 					<input type="radio" name="radio" value= 285.0>
+					<label>18"</label>
 					<input type="radio" name="radio" value= 440.0>
-					<input type = "number" name = "quantity" value = 0>		
+					</div>
+					<div>
+					<input type = "number" name = "quantity" value = 0>	
+					<script>
+					</script>					
 					<label>Quantity</label>
-					<button type = "button" name = "add_to_cart" class = "btn" onclick = "getData(); return false;"> Add to Cart </button>
+					<button type = "submit" name = "add_to_cart" class = "btn"> Add </button>
+					<button type = "submit" name = "remove_cart" class = "btn"> Remove </button>
+					</div>
 					
 			</div>
 			<div>
 				<label>NY Classic</label>
+					<div>
+					<label>10"</label>
 					<input type="radio" name="radio1" value= 210.0>
+					<label>14"</label>
 					<input type="radio" name="radio1" value= 340.0>
+					<label>18"</label>
 					<input type="radio" name="radio1" value= 530.0>	
+					</div>
+					<div>
 					<input type = "number" name = "quantity1" value = 0>
 					<label>Quantity</label>
-					<button type = "submit" name = "add_to_cart1" class = "btn"> Add to Cart </button>
+					<button type = "submit" name = "add_to_cart1" class = "btn"> Add </button>
+					<button type = "submit" name = "remove_cart1" class = "btn"> Remove </button>
+					</div>
 			</div>
 			<div>
 				<label>Pepperoni & Mushroom</label>
+					<div>
+					<label>10"</label>
 					<input type="radio" name="radio2" value= 175.0>
+					<label>14"</label>
 					<input type="radio" name="radio2" value= 285.0>
+					<label>18"</label>
 					<input type="radio" name="radio2" value= 440.0>
+					</div>
+					<div>
 					<input type = "number" name = "quantity2" value = 0>
 					<label>Quantity</label>
-					<button type = "submit" name = "add_to_cart2" class = "btn"> Add to Cart </button>
+					<button type = "submit" name = "add_to_cart2" class = "btn"> Add </button>
+					<button type = "submit" name = "remove_cart2" class = "btn"> Remove </button>
+					</div>
 			</div>
 			<div>
 				<label>Manhattan</label>
+					<div>
+					<label>10"</label>
 					<input type="radio" name="radio3" value= 250.0>
+					<label>14"</label>
 					<input type="radio" name="radio3" value= 295.0>
+					<label>18"</label>
 					<input type="radio" name="radio3" value= 565.0>
+					</div>
+					<div>
 					<input type = "number" name = "quantity3" value = 0>
 					<label>Quantity</label>
-					<button type = "submit" name = "add_to_cart3" class = "btn"> Add to Cart </button>
+					<button type = "submit" name = "add_to_cart3" class = "btn"> Add </button>
+					<button type = "submit" name = "remove_cart3" class = "btn"> Remove </button>
+					</div>
 			</div>
 			<div>
 				<label>Garden Special</label>
+					<div>
+					<label>10"</label>
 					<input type="radio" name="radio4" value= 210.0>
+					<label>14"</label>
 					<input type="radio" name="radio4" value= 340.0>
+					<label>18"</label>
 					<input type="radio" name="radio4" value= 530.0>
+					</div>
+					<div>
 					<input type = "number" name = "quantity4" value = 0>
 					<label>Quantity</label>
-					<button type = "submit" name = "add_to_cart4" class = "btn"> Add to Cart </button>
+					<button type = "submit" name = "add_to_cart4" class = "btn"> Add </button>
+					<button type = "submit" name = "remove_cart4" class = "btn"> Remove </button>
+					</div>
 			</div>
 			<div>
 					<label>Hawaiian</label>
+					<div>
+					<label>10"</label>
 					<input type="radio" name="radio5" value= 210.0>
+					<label>14"</label>
 					<input type="radio" name="radio5" value= 340.0>
+					<label>18"</label>
 					<input type="radio" name="radio5" value= 530.0>
+					</div>
+					<div>
 					<input type = "number" name = "quantity5" value = 0>
 					<label>Quantity</label>
-					<button type = "submit" name = "add_to_cart5" class = "btn"> Add to Cart </button>
+					<button type = "submit" name = "add_to_cart5" class = "btn"> Add </button>
+					<button type = "submit" name = "remove_cart5" class = "btn"> Remove </button>
+					</div>
 			</div>
 			<div>
 				<label>NY Finest</label>
+					<div>
+					<label>10"</label>
 					<input type="radio" name="radio6" value= 260.0>
+					<label>14"</label>
 					<input type="radio" name="radio6" value= 420.0>
+					<label>18"</label>
 					<input type="radio" name="radio6" value= 575.0>
+					</div>
+					<div>
 					<input type = "number" name = "quantity6" value = 0>
 					<label>Quantity</label>
-					<button type = "submit" name = "add_to_cart6" class = "btn"> Add to Cart </button>
+					<button type = "submit" name = "add_to_cart6" class = "btn"> Add </button>
+					<button type = "submit" name = "remove_cart6" class = "btn"> Remove </button>
+					</div>
 			</div>
 		</form>
 		
 		<form method = "post">
-			<h5>Specialty Pizza</h5>
+			<h4>Specialty Pizza</h4>
 			<div>
 				<label>Tribeca Mushroom</label>
+					<div>
+					<label>10"</label>
 					<input type="radio" name="radio7" value= 245.0>
+					<label>14"</label>
 					<input type="radio" name="radio7" value= 390.0>
+					<label>18"</label>
 					<input type="radio" name="radio7" value= 560.0>
+					</div>
+					<div>
 					<input type = "number" name = "quantity7" value = 0>
 					<label>Quantity</label>
-					<button type = "submit" name = "add_to_cart7" class = "btn"> Add to Cart </button>
+					<button type = "submit" name = "add_to_cart7" class = "btn"> Add </button>
+					<button type = "submit" name = "remove_cart7" class = "btn"> Remove </button>
+					</div>
 			</div>
 			<div>
 				<label>Anchovy Lovers</label>
+					<div>
+					<label>10"</label>
 					<input type="radio" name="radio8" value= 275.0>
+					<label>14"</label>
 					<input type="radio" name="radio8" value= 450.0>
+					<label>18"</label>
 					<input type="radio" name="radio8" value= 595.0>
+					</div>
+					<div>
 					<input type = "number" name = "quantity8" value = 0>
 					<label>Quantity</label>
-					<button type = "submit" name = "add_to_cart8" class = "btn"> Add to Cart </button>
+					<button type = "submit" name = "add_to_cart8" class = "btn"> Add </button>
+					<button type = "submit" name = "remove_cart8" class = "btn"> Remove </button>
+					</div>
 			</div>
 			<div>
 				<label>#4 Cheese</label>
+					<div>
+					<label>10"</label>
 					<input type="radio" name="radio9" value= 250.0>
+					<label>14"</label>
 					<input type="radio" name="radio9" value= 400.0>
+					<label>18"</label>
 					<input type="radio" name="radio9" value= 560.0>
+					</div>
+					<div>
 					<input type = "number" name = "quantity9" value = 0>
 					<label>Quantity</label>
-					<button type = "submit" name = "add_to_cart9" class = "btn"> Add to Cart </button>
+					<button type = "submit" name = "add_to_cart9" class = "btn"> Add </button>
+					<button type = "submit" name = "remove_cart9" class = "btn"> Remove </button>
+					</div>
 			</div>
 			<div>
 				<label>Corona Chicken Salsa</label>
+					<div>
+					<label>10"</label>
 					<input type="radio" name="radio10" value= 250.0>
+					<label>14"</label>
 					<input type="radio" name="radio10" value= 420.0>
+					<label>18"</label>
 					<input type="radio" name="radio10" value= 560.0>
+					</div>
+					<div>
 					<input type = "number" name = "quantity10" value = 0>
 					<label>Quantity</label>
-					<button type = "submit" name = "add_to_cart10" class = "btn"> Add to Cart </button>
+					<button type = "submit" name = "add_to_cart10" class = "btn"> Add </button>
+					<button type = "submit" name = "remove_cart10" class = "btn"> Remove </button>
+					</div>
 			</div>
 			<div>
 				<label>Gourmet Garden</label>
+					<div>
+					<label>10"</label>
 					<input type="radio" name="radio11" value= 250.0>
+					<label>14"</label>
 					<input type="radio" name="radio11" value= 410.0>
+					<label>18"</label>
 					<input type="radio" name="radio11" value= 585.0>
+					</div>
+					<div>
 					<input type = "number" name = "quantity11" value = 0>
 					<label>Quantity</label>
-					<button type = "submit" name = "add_to_cart11" class = "btn"> Add to Cart </button>
+					<button type = "submit" name = "add_to_cart11" class = "btn"> Add </button>
+					<button type = "submit" name = "remove_cart11" class = "btn"> Remove </button>
+					</div>
 			</div>
 			<div>
 				<label>Roasted Garlic</label>
+					<div>
+					<label>10"</label>
 					<input type="radio" name="radio12" value= 240.0>
+					<label>14"</label>
 					<input type="radio" name="radio12" value= 405.0>
+					<label>18"</label>
 					<input type="radio" name="radio12" value= 505.0>
-					<label>Amount</label>
+					</div>
+					<div>
 					<input type = "number" name = "quantity12" value = 0>
-					<button type = "submit" name = "add_to_cart12" class = "btn"> Add to Cart </button>
+					<label>Quantity</label>
+					<button type = "button" name = "add_to_cart12" class = "btn"> Add </button>
+					<button type = "submit" name = "remove_cart12" class = "btn"> Remove </button>
+					</div>
 			</div>
 			<div>
 				<label>Four Seasons</label>
+					<div>
+					<label>10"</label>
 					<input type="radio" name="radio13" value= 275.0>
+					<label>14"</label>
 					<input type="radio" name="radio13" value= 430.0>
+					<label>18"</label>
 					<input type="radio" name="radio13" value= 590.0>
+					</div>
+					<div>
 					<input type = "number" name = "quantity13" value = 0>
-					<label>Amount</label>
-					<button type = "submit" name = "add_to_cart13" class = "btn"> Add to Cart </button>
+					<label>Quantity</label>
+					<button type = "button" name = "add_to_cart13" class = "btn" onclick ="computation(); return false;"> Add </button>
+					<button type = "submit" name = "remove_cart13" class = "btn"> Remove </button>
+					</div>
 			</div>
 		</form>
 			<?php
+				function computation()
+				{
 						if (isset($_POST['add_to_cart']))
 						{
 							if (isset($_POST['radio']))
@@ -196,6 +311,7 @@
 								$subtotal = $num1 * $num2;
 								echo $subtotal;
 								$sub = doubleval($subtotal);
+								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
 						}
 						if (isset($_REQUEST['add_to_cart1']))
@@ -207,6 +323,7 @@
 								$subtotal1 = $num3 * $num4;
 								echo $subtotal1;
 								$sub1 = doubleval($subtotal1);
+								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
 						}
 						if (isset($_REQUEST['add_to_cart2']))
@@ -218,6 +335,7 @@
 								$subtotal2 = $num4 * $num5;
 								echo $subtotal2;
 								$sub2 = doubleval($subtotal2);
+								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
 						}
 						if (isset($_REQUEST['add_to_cart3']))
@@ -229,6 +347,7 @@
 								$subtotal3 = $num6 * $num7;
 								echo $subtotal3;
 								$sub3 = doubleval($subtotal3);
+								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
 						}
 						if (isset($_REQUEST['add_to_cart4']))
@@ -240,6 +359,7 @@
 								$subtotal4 = $num8 * $num9;
 								echo $subtotal4;
 								$sub4 = doubleval($subtotal4);
+								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
 						}
 						if (isset($_REQUEST['add_to_cart5']))
@@ -251,6 +371,7 @@
 								$subtotal5 = $num10 * $num11;
 								echo $subtotal5;
 								$sub5 = doubleval($subtotal5);
+								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
 						}
 						if (isset($_REQUEST['add_to_cart6']))
@@ -262,6 +383,7 @@
 								$subtotal6 = $num12 * $num13;
 								echo $subtotal6;
 								$sub6 = doubleval($subtotal6);
+								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
 						}
 						if (isset($_REQUEST['add_to_cart7']))
@@ -273,6 +395,7 @@
 								$subtotal7 = $num14 * $num15;
 								echo $subtotal7;
 								$sub7 = doubleval($subtotal7);
+								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
 						}
 						if (isset($_REQUEST['add_to_cart8']))
@@ -284,6 +407,7 @@
 								$subtotal8 = $num16 * $num17;
 								echo $subtotal8;
 								$sub8 = doubleval($subtotal8);
+								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
 						}
 						if (isset($_REQUEST['add_to_cart9']))
@@ -295,6 +419,7 @@
 								$subtotal9 = $num18 * $num19;
 								echo $subtotal9;
 								$sub9 = doubleval($subtotal9);
+								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
 						}
 						if (isset($_REQUEST['add_to_cart10']))
@@ -306,6 +431,7 @@
 								$subtotal10 = $num20 * $num21;
 								echo $subtotal10;
 								$sub10 = doubleval($subtotal10);
+								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
 						}
 						if (isset($_REQUEST['add_to_cart11']))
@@ -317,6 +443,7 @@
 								$subtotal11 = $num22 * $num23;
 								echo $subtotal11;
 								$sub11 = doubleval($subtotal11);
+								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
 						}
 						if (isset($_REQUEST['add_to_cart12']))
@@ -328,6 +455,7 @@
 								$subtotal12 = $num24 * $num25;
 								echo $subtotal12;
 								$sub12 = doubleval($subtotal12);
+								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
 						}
 						if (isset($_REQUEST['add_to_cart13']))
@@ -339,9 +467,10 @@
 								$subtotal13 = $num26 * $num27;
 								echo $subtotal13;
 								$sub13 = doubleval($subtotal13);
+								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
 						}
-				$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
+				}
 			?>
 		<form method = "post">
 			<label>Total Amount</label>
