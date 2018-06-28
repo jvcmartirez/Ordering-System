@@ -1,6 +1,7 @@
 <?php 
 
 	include('server.php'); 
+	
 	$amount = "";
 	$subtotal = "";
 	$subtotal1 = "";
@@ -277,7 +278,7 @@
 					<div>
 					<input type = "number" name = "quantity12" value = 0>
 					<label>Quantity</label>
-					<button type = "button" name = "add_to_cart12" class = "btn"> Add </button>
+					<button type = "submit" name = "add_to_cart12" class = "btn"> Add </button>
 					<button type = "submit" name = "remove_cart12" class = "btn"> Remove </button>
 					</div>
 			</div>
@@ -294,14 +295,13 @@
 					<div>
 					<input type = "number" name = "quantity13" value = 0>
 					<label>Quantity</label>
-					<button type = "button" name = "add_to_cart13" class = "btn" onclick ="computation(); return false;"> Add </button>
+					<button type = "submit" name = "add_to_cart13" class = "btn" onclick ="computation(); return false;"> Add </button>
 					<button type = "submit" name = "remove_cart13" class = "btn"> Remove </button>
 					</div>
 			</div>
+			
 		</form>
 			<?php
-				function computation()
-				{
 						if (isset($_POST['add_to_cart']))
 						{
 							if (isset($_POST['radio']))
@@ -309,7 +309,6 @@
 								$num1 = doubleval($_POST['quantity']);
 								$num2 = doubleval($_REQUEST['radio']);
 								$subtotal = $num1 * $num2;
-								echo $subtotal;
 								$sub = doubleval($subtotal);
 								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
@@ -321,7 +320,6 @@
 								$num3 = doubleval($_POST['quantity1']);
 								$num4 = doubleval($_REQUEST['radio1']);
 								$subtotal1 = $num3 * $num4;
-								echo $subtotal1;
 								$sub1 = doubleval($subtotal1);
 								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
@@ -333,7 +331,6 @@
 								$num4 = doubleval($_POST['quantity2']);
 								$num5 = doubleval($_REQUEST['radio2']);
 								$subtotal2 = $num4 * $num5;
-								echo $subtotal2;
 								$sub2 = doubleval($subtotal2);
 								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
@@ -345,7 +342,6 @@
 								$num6 = doubleval($_POST['quantity3']);
 								$num7 = doubleval($_REQUEST['radio3']);
 								$subtotal3 = $num6 * $num7;
-								echo $subtotal3;
 								$sub3 = doubleval($subtotal3);
 								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
@@ -357,7 +353,6 @@
 								$num8 = doubleval($_POST['quantity4']);
 								$num9 = doubleval($_REQUEST['radio4']);
 								$subtotal4 = $num8 * $num9;
-								echo $subtotal4;
 								$sub4 = doubleval($subtotal4);
 								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
@@ -369,7 +364,6 @@
 								$num10 = doubleval($_POST['quantity5']);
 								$num11 = doubleval($_REQUEST['radio5']);
 								$subtotal5 = $num10 * $num11;
-								echo $subtotal5;
 								$sub5 = doubleval($subtotal5);
 								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
@@ -393,7 +387,6 @@
 								$num14 = doubleval($_POST['quantity7']);
 								$num15 = doubleval($_REQUEST['radio7']);
 								$subtotal7 = $num14 * $num15;
-								echo $subtotal7;
 								$sub7 = doubleval($subtotal7);
 								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
@@ -405,7 +398,6 @@
 								$num16 = doubleval($_POST['quantity8']);
 								$num17 = doubleval($_REQUEST['radio8']);
 								$subtotal8 = $num16 * $num17;
-								echo $subtotal8;
 								$sub8 = doubleval($subtotal8);
 								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
@@ -417,7 +409,6 @@
 								$num18 = doubleval($_POST['quantity9']);
 								$num19 = doubleval($_REQUEST['radio9']);
 								$subtotal9 = $num18 * $num19;
-								echo $subtotal9;
 								$sub9 = doubleval($subtotal9);
 								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
@@ -429,7 +420,6 @@
 								$num20 = doubleval($_POST['quantity10']);
 								$num21 = doubleval($_REQUEST['radio10']);
 								$subtotal10 = $num20 * $num21;
-								echo $subtotal10;
 								$sub10 = doubleval($subtotal10);
 								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
@@ -441,7 +431,6 @@
 								$num22 = doubleval($_POST['quantity11']);
 								$num23 = doubleval($_REQUEST['radio11']);
 								$subtotal11 = $num22 * $num23;
-								echo $subtotal11;
 								$sub11 = doubleval($subtotal11);
 								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
@@ -453,7 +442,6 @@
 								$num24 = doubleval($_POST['quantity12']);
 								$num25 = doubleval($_REQUEST['radio12']);
 								$subtotal12 = $num24 * $num25;
-								echo $subtotal12;
 								$sub12 = doubleval($subtotal12);
 								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
@@ -465,12 +453,10 @@
 								$num26 = doubleval($_POST['quantity13']);
 								$num27 = doubleval($_REQUEST['radio13']);
 								$subtotal13 = $num26 * $num27;
-								echo $subtotal13;
 								$sub13 = doubleval($subtotal13);
 								$total = doubleval($sub) +doubleval($sub1) + doubleval($sub2) + doubleval($sub3) + doubleval($sub4) + doubleval($sub5) + doubleval($sub6)  + doubleval($sub6) + doubleval($sub7)  + doubleval($sub8)  + doubleval($sub9)  + doubleval($sub10)  + doubleval($sub11)  + doubleval($sub12)  + doubleval($sub13);
 							}
 						}
-				}
 			?>
 		<form method = "post">
 			<label>Total Amount</label>
