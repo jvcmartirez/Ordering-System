@@ -23,10 +23,11 @@
 			$vres = $db -> query ($view);
 			if ($vres -> num_rows > 0)
 			{
-				echo "<table><tr><th>Order ID</th><th>Customer ID</tr><th>Order Name</th><th>Order Quantity</tr><th>Order Price</tr></tr>";
+				echo "<table><tr><th>Order ID</th><th>Customer ID</tr><th>Customer Name</th><th>Order Name</th><th>Order Quantity</tr><th>Order Price</tr></tr>";
 				while($row = $vres -> fetch_assoc())
 				{
-					echo "<tr></td>" .$row["orderID"]. "<tr></td>" .$row["custID"]. "<tr></td>". "<tr></td>" .$row["orderNAME"]. "<tr></td>". "<tr></td>" .$row["orderQUANTITY"]. "<tr></td>". "<tr></td>" .$row["orderPRICE"]. "<tr></td>";
+					echo "<tr></td>" .$row["orderID"]. "<tr></td>" .$row["custID"]. "<tr></td>". "<tr></td>" .$row["custNAME"]. "<tr></td>". "<tr></td>" .$row["orderNAME"]. "<tr></td>". "<tr></td>" .$row["orderQUANTITY"]. "<tr></td>". "<tr></td>" .$row["orderPRICE"]. "<tr></td>";
+					
 				}
 				echo "</table>";
 			}
